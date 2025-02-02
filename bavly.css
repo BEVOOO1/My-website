@@ -1,0 +1,199 @@
+.roboto-400 {
+  font-family: "Roboto", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.noto-serif-600 {
+  font-family: "Noto Serif", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+h1 {
+  display: flex;
+  text-align: center;
+  font-size: 5vw;
+  margin-left: 3vw;
+}
+
+header {
+  position: sticky; /* Sticky header stays on top while scrolling */
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1vw 0; /* Smaller padding */
+  background-color: #707070; /* Dark background for contrast */
+  color: white;
+  font-size: 1rem; /* Smaller font size for the header */
+  font-weight: bold;
+  z-index: 2000; /* Ensures it's above other elements */
+  height: auto;
+}
+
+.p1, .p2, .p3, .p4 {
+  margin-bottom: 0.1vw; /* Add space between paragraphs */
+}
+
+.p1 {
+  font-size: 3vw;
+  text-align: center;
+}
+
+.p2 {
+  font-size: 2vw;
+  text-align: left;
+  margin-top: 0vw;
+  margin-bottom: 0vw;
+  text-indent: 2vw;
+}
+
+.p3 {
+  font-size: 1vw;
+  text-align: center;
+}
+.p4 {
+  font-size: 1.3vw;
+  text-align: left;
+  margin-top: 0vw;
+  margin-bottom: 0vw;
+}
+
+ul {
+  font-size: 18px;
+  text-align: left;
+  padding-left: 20px;
+}
+
+li {
+  list-style-type: circle;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+span {
+  color: rgb(0, 0, 0);
+  margin-left: 0.25vw;
+}
+
+html {
+  height: 100%; /* Ensures html takes full viewport height */
+  font-size: 16px; /* Set a base font size */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start; /* Align the content to the top */
+  height: 100%; /* Full viewport height */
+  background-image: url('Greyback.jpg'); /* Specify the image file */
+  background-size: cover; /* Ensures the image covers the entire background */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  font-size: 1rem; /* 1rem is equal to 16px */
+  overflow-y: auto; /* Allows vertical scrolling */
+}
+
+main {
+  display: flex;
+  width: 100%; /* Full width of the screen */
+  max-width: 1200px; /* Ensure a maximum width to prevent content from becoming too wide */
+  height: auto; /* Adjust height for responsiveness */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow */
+  border-radius: 10px; /* Optional rounded corners */
+  overflow: hidden; /* Ensures content stays within rounded borders */
+  margin-top: 80px; /* Adjust space from the header */
+  flex-wrap: wrap;
+  margin: 20px; /* Add margin on all sides */
+}
+
+.left {
+  flex: 1;
+  display: flex;
+  padding: 20px;
+  font-size: 24px;
+  background-color: rgba(139, 139, 139, 0.527);
+  color: white;
+  border-top-left-radius: 10px; /* Rounded corner (optional) */
+  border-bottom-left-radius: 10px; /* Rounded corner (optional) */
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: flex-start; /* Align content at the top */
+}
+.right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-size: 24px;
+  background-color: rgba(82, 82, 82, 0.562);
+  width: 100%;
+}
+
+.right img {
+  max-width: 100%; /* Ensures the image doesn't stretch */
+  height: auto; /* Maintains the aspect ratio */
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  body {
+      align-items: flex-start; /* Align to the top on smaller screens */
+  }
+
+  .main {
+      flex-direction: column; /* Stack content vertically */
+      width: 90%; /* Slightly reduce width on small screens */
+      height: auto; /* Ensure height adjusts as needed */
+  }
+
+  h1 {
+      font-size: 6vw; /* Adjust font size for small screens */
+  }
+
+  header {
+      font-size: 4vw; /* Slightly larger header for small screens */
+      padding: 3vw 0; /* Increase padding for readability */
+  }
+
+  .left {
+      font-size: 18px; /* Reduce text size for left side */
+      padding: 10px; /* Reduce padding for left side */
+  }
+
+  .right img {
+      max-height: 50vh; /* Limit image height on small screens */
+      object-fit: contain; /* Ensure image fits well without stretching */
+  }
+}
+
+@media (min-width: 1024px) {
+  .main {
+      flex-direction: row;
+      width: 80%; /* Keep it smaller compared to full screen size */
+      height: auto; /* Adjust height for larger screens */
+  }
+
+  h1 {
+      font-size: 3rem; /* Fixed size for large screens */
+  }
+
+  header {
+      font-size: 1.2rem; /* Even smaller header font size for large screens */
+  }
+
+  .left {
+      font-size: 24px; /* Set proper size for left side text */
+  }
+
+  .right img {
+      max-height: 100%; /* Allow image to fully take up space */
+  }
+}
