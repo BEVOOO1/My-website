@@ -1,0 +1,180 @@
+/* Google Fonts */
+.roboto-400 {
+  font-family: "Roboto", serif;
+  font-weight: 400;
+}
+
+.noto-serif-600 {
+  font-family: "Noto Serif", serif;
+  font-weight: 600;
+}
+.outfit-400 {
+  font-family: "Outfit", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* General Styles */
+.p1 {
+    font-size: 3rem;
+}
+.p2{
+  font-size: 1.3rem;
+}
+h1{
+  font-size: 4rem;
+}
+h2{
+  font-size: 2rem;
+}
+li{
+  font-size: 1.3rem;
+}
+ul{
+  list-style-type: none;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full height of viewport */
+  background-image: url('Greyback.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 1rem;
+  overflow-y: auto; /* Allows scrolling */
+}
+
+/* Header */
+header {
+  width: 100%;
+  background-color: rgba(115, 180, 255, 0.397);
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 1.5rem;
+}
+
+/* Main Content */
+main {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 90%;
+  max-width: 1000px;
+  margin: 20px auto;
+  background: rgba(115, 180, 255, 0.397);
+  box-shadow: 0px 4px 8px rgba(250, 250, 250, 0.233);
+  border-radius: 10px;
+  overflow: hidden;
+  flex-grow: 1; /* Pushes footer to bottom */
+  padding-bottom: 20px; /* Space before footer */
+  padding-left: 20px; /* Space before footer */
+  padding-right: 20px; /* Space before footer */
+  padding-top: 20px; /* Space before footer */
+  
+}
+
+/* Left Section */
+.left {
+  flex: 1;
+  padding: 20px;
+  background-color: rgba(250, 250, 250, 0);
+  color: white;
+}
+
+/* Right Section */
+.right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(250, 250, 250, 0);
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 300px; /* Ensures the right side isn't too small */
+}
+
+.right img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Footer */
+.down {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  background-color:rgba(115, 180, 255, 0.397);
+  color: white;
+  position: relative; /* Keeps it at the bottom but allows scrolling */
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Space between icons */
+  margin-top: 15px;
+}
+
+.icon {
+  width: 40px; /* Adjust size */
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.icon:hover {
+  transform: scale(1.2); /* Slight zoom effect on hover */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  main {
+      flex-direction: column;
+      width: 90%;
+  }
+
+  header {
+      font-size: 1.2rem;
+  }
+
+  .left, .right {
+      padding: 15px;
+  }
+  
+  .right {
+    width: 100%;
+    height: auto; /* Allow height to adjust */
+  }
+
+  .right img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensure full coverage */
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+      flex-direction: row;
+      width: 80%;
+  }
+
+  header {
+      font-size: 1.5rem;
+  }
+
+  .right{
+    width: 50%; /* Ensures it stays half of `.main` */
+    height: auto;
+  }
+  .right img {
+      max-height: 100%;
+      min-height: 100%;
+      object-fit: cover; /* Fills the right section completely */
+  }
+}
